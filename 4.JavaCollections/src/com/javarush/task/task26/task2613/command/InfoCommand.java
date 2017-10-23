@@ -17,7 +17,7 @@ class InfoCommand implements Command {
         for (CurrencyManipulator currency : CurrencyManipulatorFactory.getAllCurrencyManipulators())
             if (currency.hasMoney()) {
                 if (currency.getTotalAmount() > 0) {
-                    ConsoleHelper.writeMessage(currency.getCurrencyCode() + " - " + currency.getTotalAmount());
+                    ConsoleHelper.writeMessage(currency.getCurrencyCode().toUpperCase() + " - " + currency.getTotalAmount());
                     money = true;
                 }
             }
